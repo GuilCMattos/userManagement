@@ -16,7 +16,7 @@ class User {
 
     get register() { 
 
-        return this._register.toLocaleDateString("pt-br");
+        return this._register;
     }
 
     get name() { 
