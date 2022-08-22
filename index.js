@@ -7,3 +7,10 @@ let inputPassword = document.querySelector("#exampleInputPassword")
 let inputFile = document.querySelector("#exampleInputFile")
 let inputAdmin = document.querySelector("#exampleInputAdmin")
 
+let fields = document.querySelectorAll("#form-user-create [name]")
+
+fields.forEach((field, index) => { 
+    
+    console.log(field)
+
+});
