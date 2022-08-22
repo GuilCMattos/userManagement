@@ -13,7 +13,7 @@ class UserController {
        this.formEl.addEventListener("submit", e=> { 
     
             e.preventDefault();
-            
+
             this.addLine(this.getValues())
 
            
@@ -25,7 +25,7 @@ class UserController {
 
         let user = {};
 
-        this.formEl.elements.forEach((field, index) => { 
+        [...this.formEl.elements].forEach((field, index) => { 
 
             if(field.name == "gender") { 
     
