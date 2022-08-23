@@ -51,6 +51,8 @@ class UserController {
 
                     user.loadFromJSON(result);
 
+                    user.save()
+
                     tr = this.getTr(user, tr);
                   
                     this.updateCount();
@@ -92,7 +94,7 @@ class UserController {
                 (content) => {
                     values.photo = content
 
-                    this.insert(values)
+                    values.save()
 
                     this.addLine(values)
 
@@ -219,18 +221,6 @@ class UserController {
 
             this.addLine(user);
         })
-
-    }
-
-    insert(data) { 
-
-        
-        let users = this.getUsersStorage();
-       
-
-        users.push(data);
-
-        localStorage.setItem("users", JSON.stringify(users) )
 
     }
 
